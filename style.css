@@ -1,0 +1,190 @@
+/* Reset de base */
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+/* Structure générale */
+body {
+    display: flex;
+    flex-wrap: wrap;
+    background-color: #fff;
+    color: #000;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+/* Images */
+.image {
+    width: 100%;
+    height: auto;
+}
+
+/* Titres et descriptions */
+.titre {
+    font-size: 34px;
+    font-weight: 700;
+    color: #000;
+}
+
+.description {
+    font-size: 16px;
+    color: #000;
+    line-height: 1.5;
+}
+
+/* Header principal */
+.bloc-1 {
+    width: 100%;
+    height: 100px;
+    display: flex;
+    align-items: center;
+}
+
+.bloc-1 .logo {
+    height: 100%;
+    margin-left: 20px;
+}
+
+/* Bloc de présentation */
+.bloc-2 {
+    width: 100%;
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: space-between;
+    gap: 90px;
+    padding: 25px 30px;
+}
+
+.sous-bloc-1,
+.sous-bloc-2 {
+    width: 40%;
+}
+
+.sous-bloc-2 {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+.bloc-2 img {
+    border-radius: 12px;
+}
+
+/* Autres sections */
+.bloc-3,
+.bloc-4,
+.bloc-5,
+.bloc-6 {
+    width: 100%;
+    display: flex;
+    flex-wrap: wrap;
+    margin: 25px 30px 0;
+}
+
+.bloc-3 .titre,
+.bloc-6 .titre {
+    width: 100%;
+}
+
+.youtube {
+    margin: 25px 30px;
+}
+
+.bloc-5 {
+    justify-content: space-between;
+}
+
+.bloc-5 .titre {
+    margin: 12px 0 15px;
+}
+
+.bloc-6 .titre {
+    margin-bottom: 18px;
+}
+
+/* Boutons */
+.btn-theme {
+    margin-left: auto;
+    margin-right: 10px;
+    align-self: center;
+    padding: 8px 14px;
+    border: none;
+    border-radius: 20px;
+    cursor: pointer;
+    background-color: #000;
+    color: #fff;
+    font-weight: 600;
+    transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+.btn-theme:hover {
+    background-color: #333;
+}
+
+/* Menu latéral */
+.burger-btn {
+    padding: 6px 12px;
+    font-size: 20px;
+    border: none;
+    border-radius: 6px;
+    cursor: pointer;
+    background-color: #111;
+    color: #fff;
+    margin-right: 20px;
+}
+
+.side-menu {
+    position: fixed;
+    top: 0;
+    right: 0;
+    width: 230px;
+    height: 100vh;
+    background-color: #111;
+    transform: translateX(100%);
+    transition: transform 0.4s ease;
+    padding: 80px 20px;
+    z-index: 1000;
+}
+
+.side-menu a {
+    display: block;
+    text-decoration: none;
+    color: #fff;
+    font-size: 18px;
+    margin-bottom: 15px;
+}
+
+.side-menu.open {
+    transform: translateX(0);
+}
+
+/* Mode sombre */
+body.dark-mode {
+    background-color: #111;
+    color: #fff;
+}
+
+body.dark-mode .titre,
+body.dark-mode .description {
+    color: #fff;
+}
+
+body.dark-mode .bloc-2,
+body.dark-mode .bloc-3,
+body.dark-mode .bloc-4,
+body.dark-mode .bloc-5,
+body.dark-mode .bloc-6 {
+    background-color: #111;
+}
+
+body.dark-mode .btn-theme {
+    background-color: #fff;
+    color: #000;
+}
+
+body.dark-mode .side-menu {
+    background-color: #000;
+}
+
